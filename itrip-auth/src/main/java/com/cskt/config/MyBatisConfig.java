@@ -22,6 +22,7 @@ public class MyBatisConfig {
     public MybatisPlusInterceptor plusInterceptor() {
         MybatisPlusInterceptor mybatisPlusInterceptor = new MybatisPlusInterceptor();
         mybatisPlusInterceptor.addInnerInterceptor(new PaginationInnerInterceptor());
+        System.out.println("wocnm");
         return mybatisPlusInterceptor;
     }
 }
