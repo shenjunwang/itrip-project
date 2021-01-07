@@ -1,9 +1,6 @@
 package com.cskt.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
@@ -96,7 +93,7 @@ public class ItripUser implements Serializable {
     @ApiModelProperty(value="百度账号")
     private String baidu;
 
-    @TableField(value = "creation_date")
+    @TableField(value = "creation_date",fill = FieldFill.INSERT)
     @ApiModelProperty(value="")
     private Date creationDate;
 
@@ -104,7 +101,7 @@ public class ItripUser implements Serializable {
     @ApiModelProperty(value="")
     private Long createdBy;
 
-    @TableField(value = "modify_date")
+    @TableField(value = "modify_date",fill = FieldFill.INSERT_UPDATE)
     @ApiModelProperty(value="")
     private Date modifyDate;
 
@@ -115,7 +112,7 @@ public class ItripUser implements Serializable {
     /**
      * 是否激活,(0 false，1 true,默认是0)
      */
-    @TableField(value = "activated")
+    @TableField(value = "activated",fill = FieldFill.INSERT)
     @ApiModelProperty(value="是否激活,(0 false，1 true,默认是0)")
     private Integer activated;
 
@@ -124,6 +121,7 @@ public class ItripUser implements Serializable {
      */
     @TableField(value = "is_deleted")
     @ApiModelProperty(value="逻辑删除")
+    @TableLogic
     private Integer isDeleted;
 
     private static final long serialVersionUID = 1L;

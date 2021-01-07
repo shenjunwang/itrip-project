@@ -8,15 +8,15 @@ spring:
   #  \u6570\u636E\u5E93\u914D\u7F6E
   datasource:
     password: root
-    username: 123
+    username: root
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/itripdb
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
-        username: nacos
-        password: nacos
+  #cloud:
+      #nacos:
+      #discovery:
+      # server-addr: 127.0.0.1:8848
+      # username: nacos
+    # password: nacos
   application:
     name: itrip-auth
   jackson:
